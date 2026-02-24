@@ -1,0 +1,709 @@
+{
+    "1": {
+        "breed": "Siamese",
+        "name": "Luna",
+        "favorite_toy": "feather wand",
+        "age": 3,
+        "picture": "https://cataas.com/cat/siamese,cute"
+    },
+    "2": {
+        "breed": "Calico",
+        "name": "Oliver",
+        "favorite_toy": "laser pointer",
+        "age": 7,
+        "picture": "https://cataas.com/cat/calico,cute"
+    },
+    "3": {
+        "breed": "Maine Coon",
+        "name": "Milo",
+        "favorite_toy": "cat tunnel",
+        "age": 2,
+        "picture": "https://cataas.com/cat/fluffy,tabby"
+    },
+    "4": {
+        "breed": "Bengal",
+        "name": "Leo",
+        "favorite_toy": "jingle ball",
+        "age": 4,
+        "picture": "https://cataas.com/cat/tabby,cute"
+    },
+    "5": {
+        "breed": "Persian",
+        "name": "Bella",
+        "favorite_toy": "plush fish",
+        "age": 6,
+        "picture": "https://cataas.com/cat/white,fluffy"
+    },
+    "6": {
+        "breed": "Sphynx",
+        "name": "Nala",
+        "favorite_toy": "warm blanket",
+        "age": 3,
+        "picture": "https://cataas.com/cat/cute"
+    },
+    "7": {
+        "breed": "British Shorthair",
+        "name": "Charlie",
+        "favorite_toy": "spring toy",
+        "age": 7,
+        "picture": "https://cataas.com/cat/gray,cute"
+    },
+    "8": {
+        "breed": "Scottish Fold",
+        "name": "Lucy",
+        "favorite_toy": "ribbon string",
+        "age": 1,
+        "picture": "https://cataas.com/cat/cute"
+    },
+    "9": {
+        "breed": "Russian Blue",
+        "name": "Simba",
+        "favorite_toy": "ping pong ball",
+        "age": 4,
+        "picture": "https://cataas.com/cat/gray"
+    },
+    "10": {
+        "breed": "Ragdoll",
+        "name": "Cleo",
+        "favorite_toy": "catnip mouse",
+        "age": 5,
+        "picture": "https://cataas.com/cat/white,fluffy"
+    },
+    "11": {
+        "breed": "Orange Tabby",
+        "name": "Shadow",
+        "favorite_toy": "crinkle toy",
+        "age": 8,
+        "picture": "https://cataas.com/cat/orange,tabby"
+    },
+    "12": {
+        "breed": "Tuxedo",
+        "name": "Jasper",
+        "favorite_toy": "plush mouse",
+        "age": 2,
+        "picture": "https://cataas.com/cat/black,white"
+    },
+    "13": {
+        "breed": "White",
+        "name": "Daisy",
+        "favorite_toy": "feather wand",
+        "age": 3,
+        "picture": "https://cataas.com/cat/white"
+    },
+    "14": {
+        "breed": "Black",
+        "name": "Rocky",
+        "favorite_toy": "jingle ball",
+        "age": 6,
+        "picture": "https://cataas.com/cat/black,cute"
+    },
+    "15": {
+        "breed": "Gray Tabby",
+        "name": "Chloe",
+        "favorite_toy": "laser pointer",
+        "age": 7,
+        "picture": "https://cataas.com/cat/gray,tabby"
+    },
+    "16": {
+        "breed": "Calico",
+        "name": "Finn",
+        "favorite_toy": "ribbon string",
+        "age": 5,
+        "picture": "https://cataas.com/cat/calico"
+    },
+    "17": {
+        "breed": "Siamese",
+        "name": "Loki",
+        "favorite_toy": "spring toy",
+        "age": 4,
+        "picture": "https://cataas.com/cat/siamese"
+    },
+    "18": {
+        "breed": "Maine Coon",
+        "name": "Penny",
+        "favorite_toy": "cat tunnel",
+        "age": 2,
+        "picture": "https://cataas.com/cat/fluffy,cute"
+    },
+    "19": {
+        "breed": "Tabby",
+        "name": "Zoe",
+        "favorite_toy": "ping pong ball",
+        "age": 3,
+        "picture": "https://cataas.com/cat/tabby"
+    },
+    "20": {
+        "breed": "Orange",
+        "name": "Theo",
+        "favorite_toy": "plush fish",
+        "age": 9,
+        "picture": "https://cataas.com/cat/orange,cute"
+    },
+    "21": {
+        "breed": "Tuxedo",
+        "name": "Pepper",
+        "favorite_toy": "crinkle toy",
+        "age": 4,
+        "picture": "https://cataas.com/cat/black,white,cute"
+    },
+    "22": {
+        "breed": "Black",
+        "name": "Mochi",
+        "favorite_toy": "laser pointer",
+        "age": 1,
+        "picture": "https://cataas.com/cat/black"
+    },
+    "23": {
+        "breed": "White",
+        "name": "Maple",
+        "favorite_toy": "feather wand",
+        "age": 5,
+        "picture": "https://cataas.com/cat/white,cute"
+    },
+    "24": {
+        "breed": "Gray",
+        "name": "Hunter",
+        "favorite_toy": "spring toy",
+        "age": 7,
+        "picture": "https://cataas.com/cat/gray"
+    },
+    "25": {
+        "breed": "Calico",
+        "name": "Snowball",
+        "favorite_toy": "catnip mouse",
+        "age": 8,
+        "picture": "https://cataas.com/cat/calico"
+    },
+    "26": {
+        "breed": "Siamese",
+        "name": "Pixel",
+        "favorite_toy": "ribbon string",
+        "age": 2,
+        "picture": "https://cataas.com/cat/siamese"
+    },
+    "27": {
+        "breed": "Orange Tabby",
+        "name": "Gizmo",
+        "favorite_toy": "jingle ball",
+        "age": 6,
+        "picture": "https://cataas.com/cat/orange,tabby,cute"
+    },
+    "28": {
+        "breed": "Tabby",
+        "name": "Rosie",
+        "favorite_toy": "cat tunnel",
+        "age": 4,
+        "picture": "https://cataas.com/cat/tabby"
+    },
+    "29": {
+        "breed": "British Shorthair",
+        "name": "Ash",
+        "favorite_toy": "plush mouse",
+        "age": 5,
+        "picture": "https://cataas.com/cat/gray,cute"
+    },
+    "30": {
+        "breed": "Persian",
+        "name": "Ivy",
+        "favorite_toy": "warm blanket",
+        "age": 3,
+        "picture": "https://cataas.com/cat/fluffy,white"
+    },
+    "31": {
+        "breed": "Bengal",
+        "name": "Bandit",
+        "favorite_toy": "laser pointer",
+        "age": 9,
+        "picture": "https://cataas.com/cat/tabby"
+    },
+    "32": {
+        "breed": "Maine Coon",
+        "name": "Willow",
+        "favorite_toy": "feather wand",
+        "age": 6,
+        "picture": "https://cataas.com/cat/fluffy,tabby,cute"
+    },
+    "33": {
+        "breed": "Ragdoll",
+        "name": "Harper",
+        "favorite_toy": "plush fish",
+        "age": 2,
+        "picture": "https://cataas.com/cat/fluffy,white,cute"
+    },
+    "34": {
+        "breed": "Scottish Fold",
+        "name": "Blaze",
+        "favorite_toy": "spring toy",
+        "age": 1,
+        "picture": "https://cataas.com/cat/cute"
+    },
+    "35": {
+        "breed": "Russian Blue",
+        "name": "Coco",
+        "favorite_toy": "jingle ball",
+        "age": 4,
+        "picture": "https://cataas.com/cat/gray"
+    },
+    "36": {
+        "breed": "Sphynx",
+        "name": "Nova",
+        "favorite_toy": "warm blanket",
+        "age": 7,
+        "picture": "https://cataas.com/cat/cute"
+    },
+    "37": {
+        "breed": "Tuxedo",
+        "name": "Toby",
+        "favorite_toy": "cat tunnel",
+        "age": 3,
+        "picture": "https://cataas.com/cat/black,white"
+    },
+    "38": {
+        "breed": "Orange",
+        "name": "Hazel",
+        "favorite_toy": "crinkle toy",
+        "age": 5,
+        "picture": "https://cataas.com/cat/orange"
+    },
+    "39": {
+        "breed": "White",
+        "name": "Echo",
+        "favorite_toy": "ribbon string",
+        "age": 6,
+        "picture": "https://cataas.com/cat/white"
+    },
+    "40": {
+        "breed": "Black",
+        "name": "Storm",
+        "favorite_toy": "plush mouse",
+        "age": 8,
+        "picture": "https://cataas.com/cat/black"
+    },
+    "41": {
+        "breed": "Calico",
+        "name": "Pumpkin",
+        "favorite_toy": "jingle ball",
+        "age": 3,
+        "picture": "https://cataas.com/cat/calico,cute"
+    },
+    "42": {
+        "breed": "Siamese",
+        "name": "Sushi",
+        "favorite_toy": "laser pointer",
+        "age": 2,
+        "picture": "https://cataas.com/cat/siamese,cute"
+    },
+    "43": {
+        "breed": "Tabby",
+        "name": "Biscuit",
+        "favorite_toy": "feather wand",
+        "age": 4,
+        "picture": "https://cataas.com/cat/tabby,cute"
+    },
+    "44": {
+        "breed": "Gray Tabby",
+        "name": "Rex",
+        "favorite_toy": "spring toy",
+        "age": 6,
+        "picture": "https://cataas.com/cat/gray,tabby"
+    },
+    "45": {
+        "breed": "Orange Tabby",
+        "name": "Angel",
+        "favorite_toy": "cat tunnel",
+        "age": 5,
+        "picture": "https://cataas.com/cat/orange,tabby"
+    },
+    "46": {
+        "breed": "British Shorthair",
+        "name": "Bean",
+        "favorite_toy": "plush fish",
+        "age": 1,
+        "picture": "https://cataas.com/cat/gray,cute"
+    },
+    "47": {
+        "breed": "Persian",
+        "name": "Marble",
+        "favorite_toy": "warm blanket",
+        "age": 7,
+        "picture": "https://cataas.com/cat/fluffy,cute"
+    },
+    "48": {
+        "breed": "Ragdoll",
+        "name": "Petal",
+        "favorite_toy": "crinkle toy",
+        "age": 3,
+        "picture": "https://cataas.com/cat/white,fluffy"
+    },
+    "49": {
+        "breed": "Russian Blue",
+        "name": "Kiki",
+        "favorite_toy": "ping pong ball",
+        "age": 4,
+        "picture": "https://cataas.com/cat/gray"
+    },
+    "50": {
+        "breed": "Tuxedo",
+        "name": "Blue",
+        "favorite_toy": "ribbon string",
+        "age": 6,
+        "picture": "https://cataas.com/cat/black,white"
+    },
+    "51": {
+        "breed": "Black",
+        "name": "Cinnamon",
+        "favorite_toy": "jingle ball",
+        "age": 8,
+        "picture": "https://cataas.com/cat/black,cute"
+    },
+    "52": {
+        "breed": "White",
+        "name": "Prince",
+        "favorite_toy": "feather wand",
+        "age": 9,
+        "picture": "https://cataas.com/cat/white,cute"
+    },
+    "53": {
+        "breed": "Orange",
+        "name": "Peaches",
+        "favorite_toy": "laser pointer",
+        "age": 5,
+        "picture": "https://cataas.com/cat/orange,cute"
+    },
+    "54": {
+        "breed": "Calico",
+        "name": "Dash",
+        "favorite_toy": "spring toy",
+        "age": 3,
+        "picture": "https://cataas.com/cat/calico"
+    },
+    "55": {
+        "breed": "Siamese",
+        "name": "Fluffy",
+        "favorite_toy": "catnip mouse",
+        "age": 2,
+        "picture": "https://cataas.com/cat/siamese"
+    },
+    "56": {
+        "breed": "Tabby",
+        "name": "Velvet",
+        "favorite_toy": "cat tunnel",
+        "age": 4,
+        "picture": "https://cataas.com/cat/tabby"
+    },
+    "57": {
+        "breed": "Gray",
+        "name": "Moose",
+        "favorite_toy": "plush mouse",
+        "age": 6,
+        "picture": "https://cataas.com/cat/gray"
+    },
+    "58": {
+        "breed": "Orange Tabby",
+        "name": "Cupcake",
+        "favorite_toy": "crinkle toy",
+        "age": 7,
+        "picture": "https://cataas.com/cat/orange,tabby"
+    },
+    "59": {
+        "breed": "Tuxedo",
+        "name": "Scout",
+        "favorite_toy": "ribbon string",
+        "age": 5,
+        "picture": "https://cataas.com/cat/black,white"
+    },
+    "60": {
+        "breed": "Maine Coon",
+        "name": "Sky",
+        "favorite_toy": "feather wand",
+        "age": 3,
+        "picture": "https://cataas.com/cat/fluffy,tabby"
+    },
+    "61": {
+        "breed": "British Shorthair",
+        "name": "Midnight",
+        "favorite_toy": "spring toy",
+        "age": 4,
+        "picture": "https://cataas.com/cat/gray,cute"
+    },
+    "62": {
+        "breed": "Scottish Fold",
+        "name": "Lily",
+        "favorite_toy": "plush fish",
+        "age": 1,
+        "picture": "https://cataas.com/cat/cute"
+    },
+    "63": {
+        "breed": "Persian",
+        "name": "Teddy",
+        "favorite_toy": "warm blanket",
+        "age": 2,
+        "picture": "https://cataas.com/cat/fluffy,white"
+    },
+    "64": {
+        "breed": "Bengal",
+        "name": "Thor",
+        "favorite_toy": "laser pointer",
+        "age": 5,
+        "picture": "https://cataas.com/cat/tabby,cute"
+    },
+    "65": {
+        "breed": "Ragdoll",
+        "name": "Queenie",
+        "favorite_toy": "catnip mouse",
+        "age": 6,
+        "picture": "https://cataas.com/cat/white,fluffy,cute"
+    },
+    "66": {
+        "breed": "Sphynx",
+        "name": "Wrinkles",
+        "favorite_toy": "warm blanket",
+        "age": 8,
+        "picture": "https://cataas.com/cat/cute"
+    },
+    "67": {
+        "breed": "Calico",
+        "name": "Bubbles",
+        "favorite_toy": "jingle ball",
+        "age": 3,
+        "picture": "https://cataas.com/cat/calico"
+    },
+    "68": {
+        "breed": "Tabby",
+        "name": "Honey",
+        "favorite_toy": "crinkle toy",
+        "age": 4,
+        "picture": "https://cataas.com/cat/tabby"
+    },
+    "69": {
+        "breed": "Orange",
+        "name": "Piper",
+        "favorite_toy": "plush mouse",
+        "age": 7,
+        "picture": "https://cataas.com/cat/orange"
+    },
+    "70": {
+        "breed": "Black",
+        "name": "Comet",
+        "favorite_toy": "feather wand",
+        "age": 2,
+        "picture": "https://cataas.com/cat/black"
+    },
+    "71": {
+        "breed": "Siamese",
+        "name": "Oakley",
+        "favorite_toy": "laser pointer",
+        "age": 6,
+        "picture": "https://cataas.com/cat/siamese,cute"
+    },
+    "72": {
+        "breed": "Russian Blue",
+        "name": "Juno",
+        "favorite_toy": "ping pong ball",
+        "age": 5,
+        "picture": "https://cataas.com/cat/gray,cute"
+    },
+    "73": {
+        "breed": "Maine Coon",
+        "name": "Sugar",
+        "favorite_toy": "cat tunnel",
+        "age": 8,
+        "picture": "https://cataas.com/cat/fluffy,cute"
+    },
+    "74": {
+        "breed": "Tuxedo",
+        "name": "Flash",
+        "favorite_toy": "spring toy",
+        "age": 4,
+        "picture": "https://cataas.com/cat/black,white,cute"
+    },
+    "75": {
+        "breed": "Calico",
+        "name": "Dolly",
+        "favorite_toy": "plush fish",
+        "age": 7,
+        "picture": "https://cataas.com/cat/calico,cute"
+    },
+    "76": {
+        "breed": "Orange Tabby",
+        "name": "Yoda",
+        "favorite_toy": "jingle ball",
+        "age": 9,
+        "picture": "https://cataas.com/cat/orange,tabby"
+    },
+    "77": {
+        "breed": "White",
+        "name": "Pudding",
+        "favorite_toy": "feather wand",
+        "age": 1,
+        "picture": "https://cataas.com/cat/white"
+    },
+    "78": {
+        "breed": "Gray Tabby",
+        "name": "Tulip",
+        "favorite_toy": "crinkle toy",
+        "age": 2,
+        "picture": "https://cataas.com/cat/gray,tabby,cute"
+    },
+    "79": {
+        "breed": "Tabby",
+        "name": "Raven",
+        "favorite_toy": "ribbon string",
+        "age": 3,
+        "picture": "https://cataas.com/cat/tabby,cute"
+    },
+    "80": {
+        "breed": "Black",
+        "name": "Mist",
+        "favorite_toy": "laser pointer",
+        "age": 5,
+        "picture": "https://cataas.com/cat/black,cute"
+    },
+    "81": {
+        "breed": "Persian",
+        "name": "Sable",
+        "favorite_toy": "warm blanket",
+        "age": 7,
+        "picture": "https://cataas.com/cat/fluffy,cute"
+    },
+    "82": {
+        "breed": "British Shorthair",
+        "name": "Jasper",
+        "favorite_toy": "spring toy",
+        "age": 6,
+        "picture": "https://cataas.com/cat/gray"
+    },
+    "83": {
+        "breed": "Ragdoll",
+        "name": "Frost",
+        "favorite_toy": "plush mouse",
+        "age": 4,
+        "picture": "https://cataas.com/cat/white,fluffy"
+    },
+    "84": {
+        "breed": "Bengal",
+        "name": "Tigger",
+        "favorite_toy": "jingle ball",
+        "age": 8,
+        "picture": "https://cataas.com/cat/tabby"
+    },
+    "85": {
+        "breed": "Calico",
+        "name": "Pearl",
+        "favorite_toy": "feather wand",
+        "age": 3,
+        "picture": "https://cataas.com/cat/calico"
+    },
+    "86": {
+        "breed": "Siamese",
+        "name": "Noodle",
+        "favorite_toy": "laser pointer",
+        "age": 2,
+        "picture": "https://cataas.com/cat/siamese"
+    },
+    "87": {
+        "breed": "Orange",
+        "name": "Muffin",
+        "favorite_toy": "catnip mouse",
+        "age": 5,
+        "picture": "https://cataas.com/cat/orange,cute"
+    },
+    "88": {
+        "breed": "Tuxedo",
+        "name": "Dottie",
+        "favorite_toy": "ribbon string",
+        "age": 6,
+        "picture": "https://cataas.com/cat/black,white"
+    },
+    "89": {
+        "breed": "Gray",
+        "name": "Vega",
+        "favorite_toy": "ping pong ball",
+        "age": 4,
+        "picture": "https://cataas.com/cat/gray"
+    },
+    "90": {
+        "breed": "Orange Tabby",
+        "name": "Nimbus",
+        "favorite_toy": "cat tunnel",
+        "age": 7,
+        "picture": "https://cataas.com/cat/orange,tabby,cute"
+    },
+    "91": {
+        "breed": "White",
+        "name": "River",
+        "favorite_toy": "crinkle toy",
+        "age": 3,
+        "picture": "https://cataas.com/cat/white,cute"
+    },
+    "92": {
+        "breed": "Black",
+        "name": "Copper",
+        "favorite_toy": "plush fish",
+        "age": 2,
+        "picture": "https://cataas.com/cat/black"
+    },
+    "93": {
+        "breed": "Calico",
+        "name": "Indigo",
+        "favorite_toy": "feather wand",
+        "age": 5,
+        "picture": "https://cataas.com/cat/calico"
+    },
+    "94": {
+        "breed": "Siamese",
+        "name": "Diamond",
+        "favorite_toy": "laser pointer",
+        "age": 1,
+        "picture": "https://cataas.com/cat/siamese,cute"
+    },
+    "95": {
+        "breed": "Tabby",
+        "name": "Petunia",
+        "favorite_toy": "spring toy",
+        "age": 4,
+        "picture": "https://cataas.com/cat/tabby"
+    },
+    "96": {
+        "breed": "Maine Coon",
+        "name": "Sahara",
+        "favorite_toy": "cat tunnel",
+        "age": 6,
+        "picture": "https://cataas.com/cat/fluffy"
+    },
+    "97": {
+        "breed": "Russian Blue",
+        "name": "Mariner",
+        "favorite_toy": "ping pong ball",
+        "age": 7,
+        "picture": "https://cataas.com/cat/gray"
+    },
+    "98": {
+        "breed": "Tuxedo",
+        "name": "Atlas",
+        "favorite_toy": "ribbon string",
+        "age": 3,
+        "picture": "https://cataas.com/cat/black,white"
+    },
+    "99": {
+        "breed": "Orange",
+        "name": "Opal",
+        "favorite_toy": "jingle ball",
+        "age": 2,
+        "picture": "https://cataas.com/cat/orange"
+    },
+    "103": {
+        "breed": "Siamese",
+        "name": "Boo",
+        "favorite_toy": "string",
+        "age": 7,
+        "picture": "https://cataas.com/cat/siamese,cute"
+    },
+    "101": {
+        "breed": "Siamese",
+        "name": "Boo",
+        "favorite_toy": "string",
+        "age": 4,
+        "picture": "https://cataas.com/cat/siamese,cute"
+    }
+}

@@ -1,0 +1,6 @@
+uvicorn
+fastapi
+jinja2
+python-multipart
+SQLModel
+pre-commit

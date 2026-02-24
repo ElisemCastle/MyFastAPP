@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: #ffecd2;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 30px 30px rgba(0,0,0,.15);
+            width: 300px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .error {
+            margin-top: 10px;
+            color: red;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Login {{ name }}</h2>
+
+    <!-- REAL FORM POST -->
+    <form method="POST" action="/login">
+
+        <label>Username</label>
+        <input name="Username" type="text" required>
+
+        <label>Password</label>
+        <input name="Password" type="password">
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <!-- Error message returned -->
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
