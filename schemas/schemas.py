@@ -1,5 +1,4 @@
 from pydantic import BaseModel, Field
-from enum import Enum
 
 # Was going to add enum to validate breed, but ran out of time
 # class CatBreed(str, Enum):
@@ -8,6 +7,7 @@ from enum import Enum
 #     ragdoll = "ragdoll"
 #     sphynx = "sphynx"
 #     bengal = "bengal"
+
 
 class Cat(BaseModel):
     # Set None = None to make this Key optional.

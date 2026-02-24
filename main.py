@@ -1,29 +1,12 @@
-from fastapi import FastAPI
-from fastapi import Request, Form
-from typing import Annotated
-from fastapi.responses import JSONResponse, HTMLResponse
-from fastapi.responses import RedirectResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-# from starlette.middleware.sessions import SessionMiddleware
-import json
-import uvicorn
-from pydantic import BaseModel, HttpUrl
-from myfastapp.routers import cats, auth
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
-from fastapi import FastAPI, Depends, HTTPException, status, Header
-# from sqlalchemy import create_engine, select
-# from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column
-
-# from fastapi_pagination import set_params, set_page
-# from fastapi_pagination.cursor import CursorPage, CursorParams
-# from fastapi_pagination.ext.sqlalchemy import paginatex
+from myfastapp.routers import auth, cats
 
 app = FastAPI()
 
 app.include_router(cats.router)
 app.include_router(auth.router)
-
 
 
 @app.exception_handler(StarletteHTTPException)
@@ -32,13 +15,15 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
     if exc.status_code == 404:
         return JSONResponse(
             status_code=404,
-            content={"message": f"Oops! The requested endpoint '{request.url.path}' does not exist."},
+            content={
+                "message": f"Oops! The requested endpoint '{request.url.path}' does not exist."
+            },
         )
     # Re-raise or handle other HTTP exceptions if needed
     return JSONResponse(
-            status_code=exc.status_code,
-            content={"message": exc.detail},
-        )
+        status_code=exc.status_code,
+        content={"message": exc.detail},
+    )
 
 
 # # Database setup
@@ -46,4 +31,3 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
 # engine = create_engine(DATABASE_URL)
 # SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # Base = sqlalchemy.orm.declarative_base()
-

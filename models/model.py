@@ -1,7 +1,5 @@
-from typing import Annotated
+from sqlmodel import Field, SQLModel
 
-from fastapi import Depends, FastAPI, HTTPException, Query
-from sqlmodel import Field, Session, SQLModel, create_engine, select
 
 class Cat(SQLModel, table=True):
     cat_id: int | None = Field(primary_key=True)

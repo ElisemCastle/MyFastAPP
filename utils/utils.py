@@ -1,5 +1,6 @@
 import logging
 
+
 def get_logger(filename):
     logger = logging.getLogger(f"myfastapp.{filename}")
     handler = logging.StreamHandler()
