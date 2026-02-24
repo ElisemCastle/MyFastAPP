@@ -161,3 +161,164 @@ Then open:
 ```
 http://localhost:8000/docs
 ```
+
+## 🧪 Deploy Locally with Kubernetes (Minikube)
+
+This project can be deployed locally to Kubernetes using **Minikube + Helm + NGINX Ingress**.
+
+These steps simulate a real production-style deployment where the app is accessed via a hostname instead of a port.
+
+---
+
+### 1) Install Minikube
+
+Install using Homebrew (macOS):
+
+```bash
+brew install minikube
+```
+
+Start the cluster:
+
+```bash
+minikube start
+```
+
+---
+
+### 2) Enable the NGINX Ingress Controller
+
+```bash
+minikube addons enable ingress
+```
+
+Wait ~30–60 seconds for the controller to fully start.
+
+You can verify:
+
+```bash
+kubectl get pods -n ingress-nginx
+```
+
+All pods should show `Running`.
+
+---
+
+### 3) Deploy the Helm Chart
+
+From the directory **above** the chart:
+
+```bash
+helm install fastapi-cat ./fastapi-cat
+```
+
+Verify the pods:
+
+```bash
+kubectl get pods
+```
+
+Wait until the `fastapi-cat` pod is `Running`.
+
+---
+
+### 4) Expose Ingress via LoadBalancer
+
+By default the ingress controller uses a NodePort.  
+We patch it to behave like a cloud LoadBalancer:
+
+```bash
+kubectl -n ingress-nginx patch svc ingress-nginx-controller -p '{"spec":{"type":"LoadBalancer"}}'
+```
+
+---
+
+### 5) Run the Minikube Tunnel
+
+Keep this running in a separate terminal:
+
+```bash
+minikube tunnel
+```
+
+> This command requires admin privileges because it creates network routes on your machine.
+
+Now retrieve the Minikube IP:
+
+```bash
+minikube ip
+```
+
+Example output:
+
+```
+192.168.49.2
+```
+
+---
+
+### 6) Update `/etc/hosts`
+
+Edit the hosts file:
+
+```bash
+sudo nano /etc/hosts
+```
+
+Add the following line (replace with your Minikube IP):
+
+```
+192.168.49.2 fastapi-cat.local
+```
+
+Save and exit.
+
+---
+
+### 7) Flush macOS DNS Cache
+
+```bash
+sudo dscacheutil -flushcache
+sudo killall -HUP mDNSResponder
+```
+
+---
+
+### 8) Access the Application
+
+Open in your browser:
+
+```
+http://fastapi-cat.local/login
+```
+
+or
+
+```
+http://fastapi-cat.local/docs
+```
+
+You are now accessing the FastAPI app through:
+Kubernetes → Service → Ingress → Hostname routing (just like a real deployment).
+
+---
+
+### Helpful Commands
+
+Check ingress:
+
+```bash
+kubectl get ingress
+```
+
+Check services:
+
+```bash
+kubectl get svc -n ingress-nginx
+```
+
+Delete the deployment:
+
+```bash
+helm uninstall fastapi-cat
+```
