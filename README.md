@@ -22,10 +22,10 @@ pip install -r requirements.txt
 
 ### 2) Run the API (Uvicorn)
 
-From the **root of the repository** (the directory that contains the `myfastapp/` folder), run:
+From the **root of the repository** run:
 
 ```bash
-uvicorn myfastapp.main:app --reload
+uvicorn src.main:app --reload
 ```
 Server will be available at:
 
@@ -53,6 +53,7 @@ Returns a paginated list of cats.
 |--------------|------|------------|
 | `page_num`    | int  | Page number (default: 1) |
 | `page_size`   | int  | Items per page (default: 10) |
+| `age`         | int  | Filter by age |
 | `breed`       | str  | Filter by breed |
 | `favorite_toy`| str  | Filter by favorite toy |
 
@@ -262,7 +263,7 @@ Example output:
 Edit the hosts file:
 
 ```bash
-sudo nano /etc/hosts
+sudo vim /etc/hosts
 ```
 
 Add the following line (replace with your Minikube IP):
@@ -299,7 +300,7 @@ http://fastapi-cat.local/docs
 ```
 
 You are now accessing the FastAPI app through:
-Kubernetes → Service → Ingress → Hostname routing (just like a real deployment).
+Kubernetes → Service → Ingress → Hostname routing.
 
 ---
 

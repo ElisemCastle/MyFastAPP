@@ -1,16 +1,17 @@
 import json
+import re
 from pathlib import Path
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from fastapi.security import APIKeyHeader
 
-from myfastapp.schemas.schemas import Cat
-from myfastapp.utils.utils import get_logger
+from src.schemas.schemas import Cat
+from src.utils.utils import get_logger
 
 router = APIRouter()
 logger = get_logger("routes")
 
-# Python excpects the files to be in the current working dir where you call the app
+# Python excpects the files to be in the current working dir where you call the app.
 BASE_DIR = Path(__file__).resolve().parent.parent
 CATS_FILE = BASE_DIR / "cats.json"
 
@@ -37,35 +38,29 @@ async def validate_api_key(x_api_key: str = Depends(api_key_header)):
 # with open(CATS_FILE, "r") as file:
 #     data = json.load(file)
 
-# cat_filtered = {}
-# for key, value in data.items():
-#     if value["breed"] == "Calico":
-#         cat_filtered[key] = value
-# print(len(cat_filtered))
-
-
-# for record in data:
-# key = record.pop("cat_id")
-# cat_dict[key] = record
-# for key in cat_dict:
-#     print(key)
+# cat_dict = {}
+# cat_id = 0
+# # standardize the data
+# for value in data.values():
+#     toy_name_underscore = re.sub(" ", "_", value["favorite_toy"].lower())
+#     print(toy_name_underscore)
+#     value["favorite_toy"] = toy_name_underscore
+#     cat_id += 1
+#     cat_dict[cat_id] = value
 # print(cat_dict)
 # with open(CATS_FILE, "w") as file:
 #     json.dump(cat_dict, file, indent=4)
 
+# # get unique breeds
+# cat_filtered = {}
+# cat_filtered_list = []
+# for key, value in data.items():
+#     cat_filtered_list.append(value["breed"])
+#     unique_breeds = list(set(cat_filtered_list))
+# print(unique_breeds)
 
-# cat_breed = []
-# for key, record in cat_dict.items():
-#     # print(key, record)
-#     if record["breed"] == "Calico":
-#         record["cat_id"] = key
-#         cat_breed.append(record)
 # use dict of dicts to load in data
 # but use a list of dicts to return data via query parameters for filtering
-
-# for cat in cat_breed:
-#     print(cat)
-
 
 def read_data(filename=CATS_FILE):
     with open(filename, "r") as file:
@@ -99,6 +94,23 @@ def filter_cats(cat_dict, desired_breed, desired_age, desired_toy):
         filtered_cats[key] = value
     return filtered_cats
 
+def build_page_url(request: Request, page_num: int, page_size: int, breed, age, favorite_toy):
+    params = {
+        "page_num": page_num,
+        "page_size": page_size,
+    }
+
+    if breed is not None:
+        params["breed"] = breed
+
+    if age is not None:
+        params["age"] = age
+
+    if favorite_toy is not None:
+        params["favorite_toy"] = favorite_toy
+
+    url = request.url.include_query_params(**params)
+    return str(url)
 
 @router.get("/cats")
 def get_cats(
@@ -124,15 +136,13 @@ def get_cats(
     filtered_length = len(list_of_cats)
     page_items = list_of_cats[start:end]
 
-    if end >= filtered_length:
-        next_page = "none"
-    else:
-        next_page = f"/cats?page_num={page_num + 1}&page_size={page_size}&breed={breed}&age={age}&favorite_toy={favorite_toy}"
+    next_page = None
+    if end < filtered_length:
+        next_page = build_page_url(request, page_num + 1, page_size, breed, age, favorite_toy)
 
-    if page_num == 1:
-        prev_page = "none"
-    else:
-        prev_page = f"/cats?page_num={page_num - 1}&page_size={page_size}&breed={breed}&age={age}&favorite_toy={favorite_toy}"
+    prev_page = None
+    if page_num > 1:
+        prev_page = build_page_url(request, page_num - 1, page_size, breed, age, favorite_toy)
 
     response = {
         # the actual data
@@ -159,8 +169,15 @@ def create_cat(cat: Cat):
     data = read_data()
     data_length = len(data)
 
+    # Stadardize the data before saving it to the file.
+    favorite_toy =cat_dict.pop("favorite_toy")
+    favorite_toy_standardized = re.sub(" ", "_", favorite_toy.lower())
+    cat_dict["favorite_toy"] = favorite_toy_standardized
+
     data[data_length + 1] = cat_dict
     save_data(data)
+
+    print(cat_dict)
 
     return {
         "message": "Cat added successfully",
@@ -174,6 +191,7 @@ def delete_cat(cat_id: str):
     data = read_data()
     removed_cat = data.pop(cat_id, None)
     if removed_cat is None:
+        # Set custom 404 message for resource not found.
         raise HTTPException(status_code=404, detail="Cat not found")
     else:
         save_data(data)
