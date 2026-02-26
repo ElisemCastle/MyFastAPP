@@ -97,8 +97,13 @@ x-api-key
 
 **Testing keys configured in the application**
 
-```python
-API_KEYS = {"secret_key_1", "my-secret-key"}
+Save in a .env file locally.
+
+```bash
+API_KEY = "my-secret-key"
+```
+```bash
+source .env
 ```
 
 **Example request**
@@ -244,18 +249,6 @@ minikube tunnel
 
 > This command requires admin privileges because it creates network routes on your machine.
 
-Now retrieve the Minikube IP:
-
-```bash
-minikube ip
-```
-
-Example output:
-
-```
-192.168.49.2
-```
-
 ---
 
 ### 6) Update `/etc/hosts`
@@ -266,10 +259,10 @@ Edit the hosts file:
 sudo vim /etc/hosts
 ```
 
-Add the following line (replace with your Minikube IP):
+Add the following line:
 
 ```
-192.168.49.2 fastapi-cat.local
+127.0.0.1 fastapi-cat.local
 ```
 
 Save and exit.
