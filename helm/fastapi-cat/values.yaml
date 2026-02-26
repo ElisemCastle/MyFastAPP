@@ -9,7 +9,7 @@ replicaCount: 1
 image:
   repository: elisemcastle23/fastapi-cat
   # This sets the pull policy for images.
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
@@ -161,4 +161,5 @@ tolerations: []
 affinity: {}
 
 env:
-- API_KEY: "helmtestkey"
+- name: API_KEY
+  value: "helmtestkey"
