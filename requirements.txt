@@ -6,3 +6,4 @@ SQLModel
 pre-commit
 pytest
 httpx
+python-dotenv

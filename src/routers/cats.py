@@ -1,5 +1,6 @@
 import json
 import re
+import os
 from pathlib import Path
 from pydantic import BaseModel
 from typing import Annotated
@@ -11,30 +12,24 @@ from src.schemas.schemas import Cat
 from src.utils.utils import get_logger
 
 router = APIRouter()
+
+# Call get_logger function so logs will show which module they are from.
 logger = get_logger("routes")
 
 # Python excpects the files to be in the current working dir where you call the app.
 BASE_DIR = Path(__file__).resolve().parent.parent
 CATS_FILE = BASE_DIR / "cats.json"
 
-API_KEYS = {"secret_key_1", "my-secret-key"}
+API_KEY = os.getenv("API_KEY")
 
 api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
 
-
+# Validates the API key provided in the X-API-Key header.
 async def validate_api_key(x_api_key: str = Depends(api_key_header)):
-    """
-    Validates the API key provided in the X-API-Key header.
-    """
     if x_api_key is None:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED, detail="API key not provided"
-        )
-    if x_api_key not in API_KEYS:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid API Key"
-        )
-    return x_api_key  # You can return a user object or user ID here
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="API key not provided")
+    if x_api_key not in API_KEY:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid API Key")
 
 
 # with open(CATS_FILE, "r") as file:
@@ -67,7 +62,6 @@ async def validate_api_key(x_api_key: str = Depends(api_key_header)):
 def read_data(filename=CATS_FILE):
     with open(filename, "r") as file:
         return json.load(file)
-
 
 def save_data(data):
     with open(CATS_FILE, "w") as file:

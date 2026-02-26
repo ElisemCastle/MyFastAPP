@@ -36,3 +36,6 @@ build/
 
 # ---- Docker ----
 *.pid
+
+# ---- Helm values overrides ----
+values-overrides.yaml

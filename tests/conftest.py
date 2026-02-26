@@ -1,10 +1,13 @@
 import copy
 from src.main import app
+import os
+from dotenv import load_dotenv
 import pytest
 from fastapi.testclient import TestClient
 import src.routers.cats as cats
 
-TEST_API_KEY = "secret_key_1"
+load_dotenv()
+TEST_API_KEY = os.getenv("TEST_API_KEY")
 
 @pytest.fixture
 def client(monkeypatch):
@@ -22,6 +25,7 @@ def client(monkeypatch):
         store.clear()
         store.update(copy.deepcopy(new_data))
 
+    monkeypatch.setattr(cats, "API_KEY", TEST_API_KEY)
     monkeypatch.setattr(cats, "read_data", fake_read_data)
     monkeypatch.setattr(cats, "save_data", fake_save_data)
 
