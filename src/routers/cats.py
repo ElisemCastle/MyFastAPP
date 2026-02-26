@@ -1,8 +1,10 @@
 import json
 import re
 from pathlib import Path
+from pydantic import BaseModel
+from typing import Annotated
 
-from fastapi import APIRouter, Depends, HTTPException, Request, status
+from fastapi import APIRouter, Depends, HTTPException, Request, status, Query
 from fastapi.security import APIKeyHeader
 
 from src.schemas.schemas import Cat
@@ -115,8 +117,8 @@ def build_page_url(request: Request, page_num: int, page_size: int, breed, age, 
 @router.get("/cats")
 def get_cats(
     request: Request,
-    page_num: int = 1,
-    page_size: int = 10,
+    page_num: Annotated[int, Query(ge=1)] = 1,
+    page_size: Annotated[int, Query(ge=1)] = 10,
     breed: str = None,
     age: int = None,
     favorite_toy: str = None,

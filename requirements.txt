@@ -5,3 +5,4 @@ python-multipart
 SQLModel
 pre-commit
 pytest
+httpx
