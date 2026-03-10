@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook # The name of the Argo CD Application resource
+  namespace: argocd # The namespace where Argo CD is installed
+spec:
+  project: default # The Argo CD project the app belongs to
+  source:
+    repoURL: git://daemon.git.svc.cluster.local:9418 # The Git repository URL
+    targetRevision: HEAD # The branch, tag, or commit to sync
+    path: twilio-interview-gitops-repo/MyFastAPP/helm # The path within the repository to the Kubernetes manifests
+  destination:
+    server: https://kubernetes.default.svc # The Kubernetes cluster API server URL
+    namespace: default # The target namespace for the deployed application
+  syncPolicy:
+    automated:
+      prune: true # Allows Argo CD to delete resources that are no longer in Git
+      selfHeal: true # Allows Argo CD to sync live state to desired state if they drift
